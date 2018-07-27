@@ -7,7 +7,7 @@ describe "a user" do
       trail_1 = trip.trails.create(name: 'Trail by Fire', address: 'somewhere', length: 20)
       trail_2 = trip.trails.create(name: 'Trail by Combat', address: 'somewhere', length: 10)
 
-      visit trip_path(trip_1)
+      visit trip_path(trip)
 
       expect(page).to have_content(trail_1.name)
       expect(page).to have_content(trail_1.address)

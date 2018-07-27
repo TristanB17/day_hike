@@ -8,8 +8,12 @@ describe "a user" do
 
       visit trips_path
 
-      expect(page).to have_content('A long and winding road')
-      expect(page).to have_content('A song and finding road')
+      expect(page).to have_link(trip_1.name)
+      expect(page).to have_link(trip_2.name)
+      expect(page).to have_content(trip_1.start_date)
+      expect(page).to have_content(trip_1.end_date)
+      expect(page).to have_content(trip_2.start_date)
+      expect(page).to have_content(trip_2.end_date)
     end
   end
 end

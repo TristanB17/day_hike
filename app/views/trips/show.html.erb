@@ -1,6 +1,8 @@
 <%= @trip.name %>
 <%= @trip.start_date %>
 <%= @trip.end_date %><br>
+<%= @trip.total_distance %>
+<%= @trip.average_distance %>
 
 <% @trip.trails.each do |trail| %>
   <%= trail.name %>

@@ -3,6 +3,9 @@
 <%= @trip.end_date %><br>
 <%= @trip.total_distance %>
 <%= @trip.average_distance %>
+<%= @trip.average_distance %>
+Longest Distance: <%= @longest_trail %>
+Shortest Distance: <%= @shortest_trail %>
 
 <% @trip.trails.each do |trail| %>
   <%= trail.name %>

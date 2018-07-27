@@ -17,10 +17,10 @@ describe Trip, type: :model do
       trail_1 = trip.trails.create(name: 'Trail by Fire', address: 'somewhere', length: 40)
       trail_2 = trip.trails.create(name: 'Trail by Combat', address: 'somewhere', length: 15)
       expected_longest = 40
-      expected_average = 15
+      expected_shortest = 15
 
-      expect(trip.longest_trail).to eq(expected_longest)
-      expect(trip.shortest_trail).to eq(expected_shortest)
+      expect(trip.longest_trail.length).to eq(expected_longest)
+      expect(trip.shortest_trail.length).to eq(expected_shortest)
     end
   end
 end

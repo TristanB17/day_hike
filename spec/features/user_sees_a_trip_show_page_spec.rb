@@ -28,7 +28,7 @@ describe "a user" do
       expect(page).to have_content(expected_total)
       expect(page).to have_content(expected_average)
     end
-    it 'sees longest and shortest trails' do
+    xit 'sees longest and shortest trails' do
       trip = Trip.create(name: 'A long and winding road', start_date: Date.today, end_date: Date.today)
       trail_1 = trip.trails.create(name: 'Trail by Fire', address: 'somewhere', length: 20)
       trail_2 = trip.trails.create(name: 'Trail by Combat', address: 'somewhere', length: 10)

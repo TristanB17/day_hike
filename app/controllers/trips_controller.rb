@@ -8,5 +8,6 @@ class TripsController < ApplicationController
     @trip = Trip.find(params[:id])
     @longest_trail = @trip.longest_trail
     @shortest_trail = @trip.shortest_trail
+    binding.pry
   end
 end

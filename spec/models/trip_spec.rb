@@ -18,7 +18,7 @@ describe Trip, type: :model do
       trail_2 = trip.trails.create(name: 'Trail by Combat', address: 'somewhere', length: 15)
       expected_longest = 40
       expected_shortest = 15
-
+      binding.pry
       expect(trip.longest_trail.length).to eq(expected_longest)
       expect(trip.shortest_trail.length).to eq(expected_shortest)
     end

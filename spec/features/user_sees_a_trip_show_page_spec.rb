@@ -3,7 +3,7 @@ require 'rails_helper'
 describe "a user" do
   describe 'visits the trip index page' do
     it 'sees trips with all trip info' do
-      trip = Trip.create(name: 'A long and winding road', start_date: Date.today, end_date: Date.today)
+      trip = Trip.create(name: 'one', start_date: Date.today, end_date: Date.today)
       trail_1 = trip.trails.create(name: 'Trail by Fire', address: 'somewhere', length: 20)
       trail_2 = trip.trails.create(name: 'Trail by Combat', address: 'somewhere', length: 10)
 
@@ -17,7 +17,7 @@ describe "a user" do
       expect(page).to have_content(trail_2.length)
     end
     it 'sees trips with total and average trail distance' do
-      trip = Trip.create(name: 'A long and winding road', start_date: Date.today, end_date: Date.today)
+      trip = Trip.create(name: 'two', start_date: Date.today, end_date: Date.today)
       trail_1 = trip.trails.create(name: 'Trail by Fire', address: 'somewhere', length: 20)
       trail_2 = trip.trails.create(name: 'Trail by Combat', address: 'somewhere', length: 10)
       expected_total = 30
@@ -29,7 +29,7 @@ describe "a user" do
       expect(page).to have_content(expected_average)
     end
     it 'sees longest and shortest trails' do
-      trip = Trip.create(name: 'A long and winding road', start_date: Date.today, end_date: Date.today)
+      trip = Trip.create(name: 'three', start_date: Date.today, end_date: Date.today)
       trail_1 = trip.trails.create(name: 'Trail by Fire', address: 'somewhere', length: 20)
       trail_2 = trip.trails.create(name: 'Trail by Combat', address: 'somewhere', length: 10)
 

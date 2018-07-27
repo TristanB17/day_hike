@@ -18,6 +18,8 @@ describe "a user" do
     it 'sees a single trip with all trip info' do
       trip_1 = Trip.create(name: 'A long and winding road', start_date: Date.today, end_date: Date.today)
       trip_2 = Trip.create(name: 'A song and finding road', start_date: Date.today, end_date: Date.today)
+      trail_1 = trip_1.trails.create(name: 'Trail by Fire', address: 'somewhere', length: 20)
+      trail_2 = trip_2.trails.create(name: 'Trail by Combat', address: 'somewhere', length: 10)
 
       visit trips_path
 
